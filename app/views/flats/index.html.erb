@@ -1,0 +1,16 @@
+<h1 >Flats list</h1>
+<div class="d-flex">
+
+    <% @flats.each do |flat| %>
+      <div class="card m-3 " style="width: 100%;">
+        <div class="card-body ">
+          <h5 class="card-title"><%= flat.name %> </h5>
+          <p class="card-text"><%= flat.address%></p>
+          <p class="btn btn-primary"> <%= link_to "Voir plus", flat_path(flat)%></p>
+        </div>
+      </div>
+    <% end %>
+
+</div>
+
+<%#= link_to 'Add new flat', new_flat_path%>
